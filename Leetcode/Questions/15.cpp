@@ -38,24 +38,24 @@ int main(){
    
     
 
-    cout<<container_Vec.size()<<endl;
-    container_Vec.push_back(triplets);
-    container_Vec.push_back(triplets_sec);
-    cout<<container_Vec.size()<<endl;
+    // cout<<container_Vec.size()<<endl;
+    // container_Vec.push_back(triplets);
+    // container_Vec.push_back(triplets_sec);
+    // cout<<container_Vec.size()<<endl;
 
 
     // Need to work on this logic
-    // int i = 0;
-    // while(i < container_Vec.size()){
-    //     vector<int>::iterator it_c = container_Vec[i].begin();
-    //     while (it != container_Vec[i].end())
-    //     {   
-    //         cout<<*it_c<<" ";
-    //         it_c++;
-    //     }
-    //     cout<<endl;
-    //     i++;        
-    // }
+    int i = 0;
+    while(i < container_Vec.size()){
+        vector<int>::iterator it_c = container_Vec[i].begin();
+        while (it_c != container_Vec[i].end())
+        {   
+            cout<<*it_c<<" ";
+            it_c++;
+        }
+        cout<<endl;
+        i++;        
+    }
     
 
     return 0;
