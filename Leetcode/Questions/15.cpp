@@ -12,22 +12,26 @@ int main()
     vector<int>::iterator it_next = test_Data.begin()+1;
     vector<int>::iterator it_next_next = test_Data.begin()+2;
 
-    while(it != test_Data.end()){
+    // while(it != test_Data.end()){
 
-        while(it_next != test_Data.end()){
+    //     while(it_next != test_Data.end()){
 
-            while( it_next_next != test_Data.end()){
+    //         while( it_next_next != test_Data.end()){
 
-                if( (*it + *it_next + *it_next_next) == 0 ){
+    //             if( (*it + *it_next + *it_next_next) == 0 ){
 
-                    cout<<"[ "<<*it<<", "<<*it_next<<", "<<*it_next_next<<" ]"<<endl;
-                }
+    //                 cout<<"[ "<<*it<<", "<<*it_next<<", "<<*it_next_next<<" ]"<<endl;
+    //             }
 
-                it_next_next++;
-            }
-            it_next++;
-        }
-        it++;
+    //             it_next_next++;
+    //         }
+    //         it_next++;
+    //     }
+    //     it++;
+    // }
+
+    for(it = test_Data.begin(); it != test_Data.end(), it++){
+
     }
 
     return 0;
