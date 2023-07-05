@@ -31,6 +31,7 @@ int main()
         }
 
         vector<int>::iterator it = triplets.begin();
+        cout<<"1D vector is: "<<endl;
         while (it != triplets.end())
         {
             cout << *it << " ";
