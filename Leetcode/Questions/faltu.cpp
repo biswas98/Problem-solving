@@ -5,25 +5,15 @@ using namespace std;
 
 int main(){
 
-    int i = 0;
-    vector<vector<int>> myVec = {{1,2,3},{4,5,6},{7,8,9}};
+    vector<int> testVec = {1,0,0,1,1,0};
 
-    // vector<int>::iterator it = myVec[].begin();
+    vector<int>::iterator it = testVec.begin();
+    vector<int>::iterator it_next = testVec.begin() + 3;
 
-    
-    while(i < myVec.size()){
-        vector<int>::iterator it = myVec[i].begin();
-        while (it != myVec[i].end())
-        {   
-            cout<<*it<<" ";
-            it++;
-        }
-        cout<<endl;
-        i++;        
-    }
-  
+    cout<<*it<<endl;
+    cout<<*it_next<<endl; 
 
-    // cout<<myVec.size();
+
 
     return 0;
 }
