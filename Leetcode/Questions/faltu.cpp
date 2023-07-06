@@ -1,18 +1,32 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 
 using namespace std;
 
 int main(){
 
-    vector<int> testVec = {1,0,0,1,1,0};
+    vector<int> vec1 = {1,0,0,1,1,0};
+    vector<int> vec2 = {1,0,0,0,1,1};
+    
 
-    vector<int>::iterator it = testVec.begin();
-    vector<int>::iterator it_next = testVec.begin() + 3;
+    vector<int>::iterator it = vec1.begin();
+    vector<int>::iterator it_next = vec1.begin() + 3;
 
-    cout<<*it<<endl;
-    cout<<*it_next<<endl; 
+    sort(vec1.begin(),vec1.end());
+    sort(vec2.begin(),vec2.end());
 
+    if(vec1 == vec2)
+        cout<<"same"<<endl;
+
+    else    
+        cout<<"not same"<<endl;
+    
+    // while(it != testVec.end())
+    // {
+    //     cout<<*it<<" ";
+    //     it++;
+    // }
 
 
     return 0;
