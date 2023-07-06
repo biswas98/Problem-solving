@@ -6,27 +6,35 @@ using namespace std;
 
 int main(){
 
-    vector<int> vec1 = {1,0,0,1,1,0};
-    vector<int> vec2 = {1,0,0,0,1,1};
+    vector<vector<int>> vec1 = {{},{0,1,0}};
+    vector<int> vec2 = {0,1,0};
+
+    int i = 0;
+
+    if(vec1[0] == vec2)
+        cout<<"equal \n";
     
+    else
+        cout<<"Not equal \n";
 
-    vector<int>::iterator it = vec1.begin();
-    vector<int>::iterator it_next = vec1.begin() + 3;
+    // while(i != vec1.size()){
 
-    sort(vec1.begin(),vec1.end());
-    sort(vec2.begin(),vec2.end());
-
-    if(vec1 == vec2)
-        cout<<"same"<<endl;
-
-    else    
-        cout<<"not same"<<endl;
-    
-    // while(it != testVec.end())
-    // {
-    //     cout<<*it<<" ";
-    //     it++;
+    //     sort(vec1[i].begin(),vec1[i].end());
+    //     i++;
     // }
+    
+
+    // i = 0;
+    // while( i != vec1.size()){
+    //     vector<int>::iterator it = vec1[i].begin();
+    //     while(it != vec1[i].end()){
+    //         cout<<*it<<" ";
+    //         it++;
+    //     }
+    //     cout<<endl;
+    //     i++;
+    // }
+    
 
 
     return 0;

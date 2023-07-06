@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 
 using namespace std;
 
@@ -8,7 +9,8 @@ int main()
 
     vector<vector<int>> container = {};
     vector<int> temp = {};
-
+    vector<int> temp_compare = {};
+    
     vector<int> test_Data = {-1,0,1,2,-1,-4};
 
     vector<int>::iterator it = test_Data.begin();
@@ -60,8 +62,21 @@ int main()
                             it_next_next != it)
 
                         {
-
-                            cout << "[ " << *it << ", " << *it_next << ", " << *it_next_next << " ]" << endl;
+                            // cout << "[ " << *it << ", " << *it_next << ", " << *it_next_next << " ]" << endl;
+                            temp = {};
+                            temp.push_back(*it);
+                            temp.push_back(*it_next);
+                            temp.push_back(*it_next_next);
+                            
+                            int i = 0, present_check = 0;
+                            while(i != container.size()){
+                                sort(container[i].begin(),container[i].end());
+                                if(container[i] == temp)
+                                    present_check = 1;
+                                i++;
+                            }
+                            if(present_check == 0)
+                                container.push_back(temp);
                         }
                     }
                 }
@@ -69,5 +84,19 @@ int main()
         }
     }
 
+    cout<<container.size()<<endl;
+
+    int i = 0;
+    while(i < container.size()){
+
+        vector<int>::iterator it_container = container[i].begin();
+        while (it_container != container[i].end())
+        {
+            cout<<*it_container<<" ";
+            it_container++;
+        }
+        cout<<endl;
+        i++;
+    }
     return 0;
 }
