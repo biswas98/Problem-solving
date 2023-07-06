@@ -6,7 +6,7 @@ using namespace std;
 int main()
 {
 
-    vector<int> test_Data = {-1, 0, 1, 2, -1, -4};
+    vector<int> test_Data = {0,0,0};
 
     vector<int>::iterator it = test_Data.begin();
     vector<int>::iterator it_next = test_Data.begin() + 1;
