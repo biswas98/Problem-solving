@@ -4,38 +4,44 @@
 
 using namespace std;
 
-int main(){
+class Test_Solution
+{
 
-    vector<vector<int>> vec1 = {{},{0,1,0}};
-    vector<int> vec2 = {0,1,0};
+public:
+    vector<vector<int>> display()
+    {
+
+        vector<vector<int>> ret_Vec = {{11,11},{12,12},{13,13}};
+
+        return ret_Vec;
+    }
+};
+
+int main()
+{
+
+    Test_Solution obj;
+
+    vector<int> test = {0, 0, 0, 0};
+
+    vector<vector<int>> ret = {};
+
+    ret = obj.display();
 
     int i = 0;
 
-    if(vec1[0] == vec2)
-        cout<<"equal \n";
-    
-    else
-        cout<<"Not equal \n";
+    while (i < ret.size())
+    {
+        vector<int>::iterator it = ret[i].begin();
+        while (it != ret[i].end())
+        {
 
-    // while(i != vec1.size()){
-
-    //     sort(vec1[i].begin(),vec1[i].end());
-    //     i++;
-    // }
-    
-
-    // i = 0;
-    // while( i != vec1.size()){
-    //     vector<int>::iterator it = vec1[i].begin();
-    //     while(it != vec1[i].end()){
-    //         cout<<*it<<" ";
-    //         it++;
-    //     }
-    //     cout<<endl;
-    //     i++;
-    // }
-    
-
-
+            cout << *it << " ";
+            it++;
+        }
+        cout<<endl;
+        i++;
+    }
+    cout << endl;
     return 0;
 }

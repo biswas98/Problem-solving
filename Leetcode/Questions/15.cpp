@@ -4,14 +4,24 @@
 
 using namespace std;
 
+class Solution
+{
+public:
+    vecter<vector<int>> threeSum(vector<int> &nums)
+    {
+    }
+};
+
 int main()
-{   
+{
+    Solution obj;
+    
+    vector<int> test_Data = {-1, 0, 1, 2, -1, -4};
 
     vector<vector<int>> container = {};
     vector<int> temp = {};
     vector<int> temp_compare = {};
-    
-    vector<int> test_Data = {-1,0,1,2,-1,-4};
+
 
     vector<int>::iterator it = test_Data.begin();
     vector<int>::iterator it_next = test_Data.begin() + 1;
@@ -67,15 +77,16 @@ int main()
                             temp.push_back(*it);
                             temp.push_back(*it_next);
                             temp.push_back(*it_next_next);
-                            
+
                             int i = 0, present_check = 0;
-                            while(i != container.size()){
-                                sort(container[i].begin(),container[i].end());
-                                if(container[i] == temp)
+                            while (i != container.size())
+                            {
+                                sort(container[i].begin(), container[i].end());
+                                if (container[i] == temp)
                                     present_check = 1;
                                 i++;
                             }
-                            if(present_check == 0)
+                            if (present_check == 0)
                                 container.push_back(temp);
                         }
                     }
@@ -84,18 +95,19 @@ int main()
         }
     }
 
-    cout<<container.size()<<endl;
+    cout << container.size() << endl;
 
     int i = 0;
-    while(i < container.size()){
+    while (i < container.size())
+    {
 
         vector<int>::iterator it_container = container[i].begin();
         while (it_container != container[i].end())
         {
-            cout<<*it_container<<" ";
+            cout << *it_container << " ";
             it_container++;
         }
-        cout<<endl;
+        cout << endl;
         i++;
     }
     return 0;
