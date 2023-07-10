@@ -45,7 +45,6 @@ public:
                                 it_next_next != it)
 
                             {
-                                // cout << "[ " << *it << ", " << *it_next << ", " << *it_next_next << " ]" << endl;
                                 temp = {};
                                 temp.push_back(*it);
                                 temp.push_back(*it_next);
@@ -77,7 +76,7 @@ int main()
 {
     Solution obj;
 
-    vector<int> nums = {0,0,0};
+    vector<int> nums = {-1,0,1,0};
 
     vector<vector<int>> ret = {};
 
