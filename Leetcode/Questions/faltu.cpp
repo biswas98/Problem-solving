@@ -4,44 +4,16 @@
 
 using namespace std;
 
-class Test_Solution
-{
-
-public:
-    vector<vector<int>> display()
-    {
-
-        vector<vector<int>> ret_Vec = {{11,11},{12,12},{13,13}};
-
-        return ret_Vec;
-    }
-};
 
 int main()
 {
+    vector<int> v1 = {1,0,1};
+    vector<int> v2 = {1,1,0};
 
-    Test_Solution obj;
-
-    vector<int> test = {0, 0, 0, 0};
-
-    vector<vector<int>> ret = {};
-
-    ret = obj.display();
-
-    int i = 0;
-
-    while (i < ret.size())
-    {
-        vector<int>::iterator it = ret[i].begin();
-        while (it != ret[i].end())
-        {
-
-            cout << *it << " ";
-            it++;
-        }
-        cout<<endl;
-        i++;
-    }
-    cout << endl;
+    if(v1==v2)
+        cout<<"same\n";
+    else
+        cout<<"not same\n";
+    
     return 0;
 }

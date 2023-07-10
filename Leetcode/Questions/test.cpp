@@ -6,40 +6,30 @@ using namespace std;
 
 int main()
 {
+    int arr[] = {10,2,3,4,5};
 
-    vector<vector<int>> container = {};
-  
-
-    vector<int> temp = {};
-
-    temp.push_back(1);
-    temp.push_back(2);
-    temp.push_back(3);
-
-    container.push_back(temp);
-
-    temp = {};
-
-    temp.push_back(60);
-    temp.push_back(70);
-    temp.push_back(80);
-
-    container.push_back(temp);
+    int* ptr = arr;
+    
 
 
-    int i = 0;
-    while (i < container.size())
-    {
-        vector<int>::iterator it_container = container[i].begin();
+    for (int i = 0; i < 5; i++)
+    {   
+        cout<<*(ptr+i)<<" ";
+        
+        for(int j = i+1; j < 5; j++){
 
-        while (it_container != container[i].end())
-        {
-            cout << *it_container << " ";
-            it_container++;
+            cout<<*(ptr+j)<<" ";
+
+            for(int k = j+1; k < 5; k++){
+
+                cout<<*(ptr+k)<<" ";
+
+            }
+            cout<<endl;
         }
-        cout<<endl;
-        i++;
+        cout<<endl;        
     }
+    
 
     return 0;
 }

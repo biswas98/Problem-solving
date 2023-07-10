@@ -21,54 +21,54 @@ public:
         for (it = nums.begin(); it != nums.end(); it++)
         {
 
-            if (
-                it != it_next &&
-                it_next != it_next_next &&
-                it_next_next != it)
-            {
+            // if (
+            //     it != it_next &&
+            //     it_next != it_next_next &&
+            //     it_next_next != it)
+            // {
 
-                for (it_next = nums.begin() + 1; it_next != nums.end(); it_next++)
+            for (it_next = nums.begin() + 1; it_next != nums.end(); it_next++)
+            {
+                // if (
+                //     it != it_next &&
+                //     it_next != it_next_next &&
+                //     it_next_next != it)
+                // {
+
+                for (it_next_next = nums.begin() + 2; it_next_next != nums.end(); it_next_next++)
                 {
+
                     if (
+                        (*it + *it_next + *it_next_next) == 0 &&
                         it != it_next &&
                         it_next != it_next_next &&
                         it_next_next != it)
+
                     {
+                        temp = {};
+                        temp.push_back(*it);
+                        temp.push_back(*it_next);
+                        temp.push_back(*it_next_next);
 
-                        for (it_next_next = nums.begin() + 2; it_next_next != nums.end(); it_next_next++)
+                        int i = 0, present_check = 0;
+                        while (i != container.size())
                         {
-
-                            if (
-                                (*it + *it_next + *it_next_next) == 0 &&
-                                it != it_next &&
-                                it_next != it_next_next &&
-                                it_next_next != it)
-
-                            {
-                                temp = {};
-                                temp.push_back(*it);
-                                temp.push_back(*it_next);
-                                temp.push_back(*it_next_next);
-
-                                int i = 0, present_check = 0;
-                                while (i != container.size())
-                                {
-                                    sort(container[i].begin(), container[i].end());
-                                    if (container[i] == temp)
-                                        present_check = 1;
-                                    i++;
-                                }
-                                if (present_check == 0)
-                                    container.push_back(temp);
-                            }
+                            sort(container[i].begin(), container[i].end());
+                            sort(temp.begin(), temp.end());
+                            if (container[i] == temp)
+                                present_check = 1;
+                            i++;
                         }
+                        if (present_check == 0)
+                            container.push_back(temp);
                     }
                 }
+                // }
             }
+            // }
         }
-    
-        return container;
 
+        return container;
     }
 };
 
@@ -76,13 +76,11 @@ int main()
 {
     Solution obj;
 
-    vector<int> nums = {-1,0,1,0};
+    vector<int> nums = {0,0,0};
 
     vector<vector<int>> ret = {};
 
     ret = obj.threeSum(nums);
-
-    // cout << container.size() << endl;
 
     int i = 0;
     while (i < ret.size())
@@ -97,6 +95,6 @@ int main()
         cout << endl;
         i++;
     }
-    
+
     return 0;
 }
