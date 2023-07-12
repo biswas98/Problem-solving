@@ -76,7 +76,7 @@ int main()
 {
     Solution obj;
 
-    vector<int> nums = {0,0,0};
+    vector<int> nums = {1,1,1};
 
     vector<vector<int>> ret = {};
 
