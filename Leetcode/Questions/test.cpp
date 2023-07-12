@@ -6,7 +6,7 @@ using namespace std;
 
 int main()
 {
-    vector<int> vec = {1,4,2,3};
+    vector<int> vec = {0,1,0,9,1,0,0};
 
     sort(vec.begin(),vec.end());
 
