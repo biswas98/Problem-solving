@@ -6,29 +6,18 @@ using namespace std;
 
 int main()
 {
-    int arr[] = {10,2,3,4,5};
+    vector<int> vec = {1,4,2,3};
 
-    int* ptr = arr;
-    
+    sort(vec.begin(),vec.end());
 
+    vector<int>::iterator it = vec.begin();
 
-    for (int i = 0; i < 5; i++)
-    {   
-        cout<<*(ptr+i)<<" ";
-        
-        for(int j = i+1; j < 5; j++){
+    while(it != vec.end()){
 
-            cout<<*(ptr+j)<<" ";
-
-            for(int k = j+1; k < 5; k++){
-
-                cout<<*(ptr+k)<<" ";
-
-            }
-            cout<<endl;
-        }
-        cout<<endl;        
-    }
+        cout<<*it<<" ";
+        it++;
+    }    
+    cout<<endl;
     
 
     return 0;
