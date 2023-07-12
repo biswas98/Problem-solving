@@ -87,6 +87,7 @@ int main()
     {
 
         vector<int>::iterator it_ret = ret[i].begin();
+        
         while (it_ret != ret[i].end())
         {
             cout << *it_ret << " ";
