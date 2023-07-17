@@ -24,8 +24,7 @@ int main()
  
 
     set<set<int>> my2Dset = {{4, 3, 2, 1}, {1, 2, 3, 4}, {4, 3, 2, 1}, {2, 6, 1, 2}};
-
-   cout<<my2Dset[0];
+    
     
 
     return 0;
