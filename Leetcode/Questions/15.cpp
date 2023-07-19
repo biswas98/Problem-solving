@@ -74,10 +74,7 @@ public:
 };
 
 int main()
-{   
-
-
-    
+{     
     // main
     Solution obj;
 
