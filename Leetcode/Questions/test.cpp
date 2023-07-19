@@ -6,17 +6,18 @@ using namespace std;
 
 int main()
 {
-    vector<int> vec = {0,1,0,9,1,0,0};
+    vector<int>  vec1 = {0,1,0,1,1,1,0,0, 0,0, 1};
 
-    sort(vec.begin(),vec.end());
+    vector<int>::iterator it = vec1.begin();
 
-    vector<int>::iterator it = vec.begin();
+    sort(vec1.begin(),vec1.end());
 
-    while(it != vec.end()){
-
+    while (it != vec1.end())
+    {
         cout<<*it<<" ";
         it++;
-    }    
+    }
+    
     cout<<endl;
     
 
