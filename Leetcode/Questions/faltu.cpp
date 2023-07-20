@@ -16,11 +16,15 @@ int main()
 
     set<int>::iterator it = mySet.begin();
 
+
+    
     while (it != mySet.end())
     {
         cout<<*it<<" ";
         it++;
     }
+
+
     cout<<endl;
     
     return 0;
