@@ -20,6 +20,16 @@ int main(){
     }
     cout<<endl;
 
+    set<int> s1 = {2,2,3,3,0,0,1,1};
+
+    set<int>::iterator its = s1.begin();
+
+    while(its != s1.end()){
+
+        cout<<*its<<" ";
+        its++;
+    }
+    cout<<endl;
 
     return 0;
 }
