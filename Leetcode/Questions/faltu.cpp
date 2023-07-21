@@ -22,7 +22,7 @@ int main()
         it++;
     }
 
-cle    cout<<endl;
+    cout<<endl;
     
     return 0;
 }
