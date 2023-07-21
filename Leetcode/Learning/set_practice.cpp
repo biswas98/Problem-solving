@@ -12,11 +12,11 @@ int main(){
 
     sort(v1.begin(),v1.end());
 
-    vector<int>::iterator it = v1.begin();
+    vector<int>::iterator itv = v1.begin();
 
-    while(it != v1.end()){
-        cout<<*it<<" ";
-        it++;
+    while(itv != v1.end()){
+        cout<<*itv<<" ";
+        itv++;
     }
     cout<<endl;
 
