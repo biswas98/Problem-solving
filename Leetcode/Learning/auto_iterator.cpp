@@ -8,7 +8,7 @@ using namespace std;
 
 int main(){
 
-    
+    // "Auto" iterator while 1D vector
     vector<int> v1 = {1,1,2,4};
 
     for(auto i : v1){
@@ -17,6 +17,7 @@ int main(){
     cout<<endl;
 
 
+    // "Auto" iterator while 2D vector
     vector<vector<int>> v2 = {{1,0,1},{0,1,0},{0,0,0}};
 
     for( auto r : v2){
