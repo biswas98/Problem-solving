@@ -24,6 +24,20 @@ int main()
     set<set<int>> mySet = {{1,2,3},{4,5,6},{7,8,9}};
 
     cout<<mySet.size();
+
+    int i = 0;
+
+    while (i != mySet.size())
+    {
+        auto it = mySet[i].begin();
+        while (it != mySet.end())
+        {
+            cout<<*it<<" ";
+
+        }
+        
+
+    }
     
 
     return 0;
