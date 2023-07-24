@@ -27,7 +27,7 @@ int main(){
         cout<<endl;
     }
 
-    
+    // "Auto" iterator while 1D set
     set<int> s1 = {1,1,2,2,3,3};
 
     for(auto iS : s1){
@@ -35,6 +35,16 @@ int main(){
         
     }
     cout<<endl;
+
+    // "Auto" iterator while 2D set
+    set<set<int>> s2 = {{1,2,3},{6,3,7},{2,2,2},{7,8,0}};
+
+    for(auto r : s2){
+        for(auto c : r){
+            cout<<c<<" ";
+        }
+        cout<<endl;
+    }
 
     return 0;
 
