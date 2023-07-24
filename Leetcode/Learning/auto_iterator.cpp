@@ -27,6 +27,15 @@ int main(){
         cout<<endl;
     }
 
+    
+    set<int> s1 = {1,1,2,2,3,3};
+
+    for(auto iS : s1){
+        cout<<iS<<" ";
+        
+    }
+    cout<<endl;
+
     return 0;
 
 }
