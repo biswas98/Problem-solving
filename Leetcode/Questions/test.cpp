@@ -9,9 +9,9 @@ int main()
 {
     vector<vector<int>>  vec1 = {{1,2,4},{3,2,1}};
 
-    for (const auto &i : vec1)   
+    for ( auto i : vec1)   
     {   
-        for (const auto &e : vec1)
+        for ( auto e : i)
         {
             cout<<e<<" ";
         }
