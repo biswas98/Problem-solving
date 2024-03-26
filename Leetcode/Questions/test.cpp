@@ -5,31 +5,16 @@
 
 using namespace std;
 
+int digiCount(int num){
+    int count = 1;
+    if (num%10 != 0)
+        return count+digiCount((num-(num%10))/10);
+    // else
+    //     return count;
+}
+
 int main()
 {
-    vector<vector<int>>  vec1 = {{1,2,4},{3,2,1}};
-
-    for ( auto i : vec1)   
-    {   
-        for ( auto e : i)
-        {
-            cout<<e<<" ";
-        }
-
-        cout<<endl;
-    }
-    
-
-    
-    
-
-
-    // set<set<int>> mySet = {{1,2,3},{4,5,6},{7,8,9}};
-
-    // cout<<mySet.size();
-
-    
-    
-
+    cout<<digiCount(121)<<endl;
     return 0;
 }
